@@ -62,7 +62,7 @@ public class TileButton extends Button {
 				setGraphic(new ImageView(Images.MINE.getImage()));
 			}
 			else if(tile.getMinedNeighbours() == 0) {
-				setVisible(false);
+				setDisable(true);
 			}
 			else {
 				this.setText("" + tile.getMinedNeighbours());
