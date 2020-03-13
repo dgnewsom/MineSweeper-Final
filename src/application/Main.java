@@ -2,12 +2,15 @@ package application;
 
 import java.util.Optional;
 
+import com.sun.javafx.application.LauncherImpl;
+
 import gui.GUI;
 import gui.Images;
 import javafx.application.Application;
+import javafx.application.Preloader;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import model.HighScores;
@@ -22,14 +25,20 @@ import model.HighScores;
 public class Main extends Application {
 
 	private static Stage stage;
-
+	private static final int COUNT_LIMIT = 100;
+	
 	public static void main(String[] args) {
-		launch(args);
+		//Load splash screen
+		LauncherImpl.launchApplication(Main.class, SplashPreloader.class, args);
 	}
 
 	@Override
 	public void init() throws Exception {
-		super.init();
+		//count and pass value to the Splash preLoader
+		for (int i = 1; i <= COUNT_LIMIT; i ++) {
+            LauncherImpl.notifyPreloader(this, new Preloader.ProgressNotification(i));
+            Thread.sleep(30);
+        }
 	}
 
 	@Override

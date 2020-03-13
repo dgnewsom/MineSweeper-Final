@@ -87,8 +87,8 @@
 		</fx:resources>
 	
 		<fx:application id="fxApplication"
-			name=""
-			mainClass=""
+			name="MineSweeper Final"
+			mainClass="application.Main"
 		/>
 	
 		<mkdir dir="build/classes/META-INF" />
@@ -102,9 +102,10 @@
 			<fx:resources refid="appRes"/>
 	
 			<manifest>
-				<attribute name="Implementation-Vendor" value=""/>
-				<attribute name="Implementation-Title" value=""/>
-				<attribute name="Implementation-Version" value=""/>
+				<attribute name="Implementation-Vendor" value="Daniel Newsom"/>
+				<attribute name="Implementation-Title" value="MineSweeper Final"/>
+				<attribute name="Implementation-Version" value="3.0"/>
+				<attribute name="SplashScreen-Image" value=""/>
 				<attribute name="JavaFX-Feature-Proxy" value="None"/>
 			</manifest>
 		</fx:jar>
