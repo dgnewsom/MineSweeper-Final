@@ -216,8 +216,8 @@ public class GUI {
 	 * Constructs the main minefield representaion
 	 */
 	private void createMainGameField() {
-		mainGameField = new TilePane(Orientation.VERTICAL);
-		mainGameField.setPrefRows(game.getMinefield().getRows());
+		mainGameField = new TilePane();
+		mainGameField.setPrefColumns(game.getMinefield().getCols());
 		mainGameField.setPadding(new Insets(15));
 		mainGameField.setAlignment(Pos.CENTER);
 		

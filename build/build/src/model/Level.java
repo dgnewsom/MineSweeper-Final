@@ -269,6 +269,7 @@ public enum Level {
 		}
 		else {
 			RadioMenuItem menuItem = (RadioMenuItem) e.getSource();
+			if(menuItem.getUserData() == Level.CUSTOM) {Level.setCustomLevel();}
 			level = ((Level) menuItem.getUserData());
 			Main.startGame(Main.getStage());
 		}

@@ -4,7 +4,6 @@ import application.Main;
 import application.MineSweeper;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
-import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -216,8 +215,8 @@ public class GUI {
 	 * Constructs the main minefield representaion
 	 */
 	private void createMainGameField() {
-		mainGameField = new TilePane(Orientation.VERTICAL);
-		mainGameField.setPrefRows(game.getMinefield().getRows());
+		mainGameField = new TilePane();
+		mainGameField.setPrefColumns(game.getMinefield().getCols());
 		mainGameField.setPadding(new Insets(15));
 		mainGameField.setAlignment(Pos.CENTER);
 		
